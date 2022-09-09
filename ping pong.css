@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ims {
+    height: 45vh;
+    /* width: 100%; */
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.ping {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 700px;
+    background-color: #16697a;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.titles {
+    color: #e63946;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.score {
+    color: white;
+    margin: 30px 0px;
+    margin-left: 30px;
+    line-height: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.playerOne,
+.playerTwo {
+    display: inline-block;
+}
+
+.win {
+    color: green;
+}
+
+.lose {
+    color: red;
+}
+
+@media (min-width:2400px) {
+    .ping {
+        height: 64vh;
+    }
+
+    img {
+        width: 700px;
+    }
+
+    .ims {
+        height: 50%;
+    }
+}
