@@ -13,22 +13,22 @@ const Two = {
 const reset = document.querySelector(".reset")
 const upto = document.querySelector("#point")
 
-let winscore = 1;
-let isGameover = false;
+let winScore = 1;
+let isGameOver = false;
 
 function Scores(player, opponent) {
-    if (!isGameover) {
+    if (!isGameOver) {
         player.Display += 1
-        if (player.Display === winscore) {
-            isGameover = true;
+        if (player.Display === winScore) {
+            isGameOver = true;
             player.Score.classList.toggle('win');
             opponent.Score.classList.toggle('lose');
             player.Button.disabled = true;
             opponent.Button.disabled = true;
         }
         player.Score.innerText = player.Display;
-        if (player.Display === opponent.Display && winscore >= player.Display + 1) {
-            winscore = player.Display + 2;
+        if (player.Display === opponent.Display && winScore >= player.Display + 1) {
+            winScore = player.Display + 2;
         }
     }
 }
@@ -39,17 +39,17 @@ function resets() {
         p.Display = 0;
         p.Button.disabled = false;
         p.Score.classList.remove("win", "lose")
-        winscore = parseInt(upto.value);
+        winScore = parseInt(upto.value);
     }
-    isGameover = false;
+    isGameOver = false;
 }
 
 upto.addEventListener('change', function () {
-    winscore = parseInt(this.value);
+    winScore = parseInt(this.value);
     resets();
 })
 
-one.Button.addEventListener('click', function () { Scores(one, Two) })
+one.Button.addEventListener('', function () { Scores(one, Two) })
 
 Two.Button.addEventListener('click', function () { Scores(Two, one) })
 
