@@ -49,7 +49,7 @@ upto.addEventListener('change', function () {
     resets();
 })
 
-one.Button.addEventListener('', function () { Scores(one, Two) })
+one.Button.addEventListener('click', function () { Scores(one, Two) })
 
 Two.Button.addEventListener('click', function () { Scores(Two, one) })
 
